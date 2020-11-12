@@ -1,0 +1,11 @@
+- install jenkins in two ways:
+	war file
+		use java -jar [file.war]
+		You will need to install java if you don't already have it.
+	docker
+		follow the instructions on the jenkins website.
+
+	open a browser on your jenkins
+		http://[your_ip]:8080/
+
+- play around with the GUI.

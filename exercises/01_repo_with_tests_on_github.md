@@ -11,22 +11,3 @@
 * Run a jenkins job and see how jenkins pulls your code from github and tests it.
 
 
-Instructions for people who cannot reach their cloud machine at port 8080
-
-* You must be connected with MobaXterm to do this.
-
-* install firefox on your remote machine:
-
-```shell
-sudo apt install firefox
-```
-
-* run firefox in the background: 
-
-```
-firefox &
-```
-
-* Firefox should, after the appropriate wait time, appear on your windows desk
-
-* Point your firefox to localhost:8080

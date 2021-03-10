@@ -1,0 +1,12 @@
+
+This is the vova method...:)
+
+- open a mobaXterm terminal
+- know where your pem file is
+- run
+	ssh -i [where your pem file is] -f -N ubuntu@[your remote ip] -L 9081:[your remote ip]:8080
+- this command maps localhost:9081 to [your remote ip]:8080
+- open a local browser on your windows machine and point it to:
+	localhost:9081
+
+Enjoy!

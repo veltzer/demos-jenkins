@@ -1,4 +1,4 @@
-* install jenkins in two ways out of the folling three:
+* install jenkins the following three ways:
 	* war file (recommended)
 		use
 		$ java -jar [file.war]

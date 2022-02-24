@@ -1,0 +1,13 @@
+Options:
+- create my own jenkins image which is based on the official jenknis
+	image and adds python+pip+pytest+...
+- look for a plugin (very suspicious)
+- docker exec
+	add the stuff we need to the running jenkins containr
+	UGLY!!!
+	Need to repeat every time we a new jenkins container.
+- Add stages to install everything we need. 
+	May not work! because jenkins runs as user 1000 and not user 0 (root).
+	Could work, just not in this case.
+
+All of these options are suspect... None of them is really good.

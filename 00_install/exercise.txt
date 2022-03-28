@@ -1,4 +1,4 @@
-* install jenkins the following three ways:
+* install jenkins in the following ways:
 	* docker
 		follow the instructions on the jenkins website.
 		You will need to install docker, configure it properly.

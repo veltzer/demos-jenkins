@@ -8,3 +8,6 @@ The idea behind this exercise is to run pipelines in docker.
 	(all you need to change is the "agent" line)
 
 * Check that you can run the build inside docker
+
+References:
+- https://www.jenkins.io/doc/book/pipeline/docker/

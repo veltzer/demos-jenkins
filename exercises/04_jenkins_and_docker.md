@@ -1,4 +1,3 @@
-
 The idea behind this exercise is to run pipelines in docker.
 
 * Install the docker plugin.

@@ -1,4 +1,3 @@
-
 The idea of this exercise is to write one pipeline that
 checks out *TWO* repositories and "builds" them together.
 

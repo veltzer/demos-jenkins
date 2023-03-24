@@ -1,4 +1,3 @@
-
 * if you don't have a github account - open one
 * open a repo to play with (call it "test"?)
 * add some python code to your repo, for example:

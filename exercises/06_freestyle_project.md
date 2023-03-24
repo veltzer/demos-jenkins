@@ -1,4 +1,3 @@
-
 Develop a python code + pytest style project using the "freestyle" jenkins project type.
 
 You should use the "freestyle" jenkins project for this exercise.

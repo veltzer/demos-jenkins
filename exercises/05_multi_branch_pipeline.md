@@ -1,4 +1,3 @@
-
 The idea behind this exercise is to have jenkins do different things for different branches.
 
 You should use the "multibranch" jenkins project for this

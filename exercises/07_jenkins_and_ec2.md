@@ -1,5 +1,3 @@
-
-
 The idea of this exercise is to connect jenkins to ec2 and have jenkins run agents
 on ec2 machines.
 

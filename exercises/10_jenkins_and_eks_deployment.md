@@ -1,5 +1,3 @@
-
-
 The idea of this exercise is to have a Jenkins pipeline that deploys a kubernetes application
 on an EKS cluster.
 

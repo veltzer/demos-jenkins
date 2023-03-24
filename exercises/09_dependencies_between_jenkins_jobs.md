@@ -1,5 +1,3 @@
-
-
 Create two jenkins jobs A and B and have A depend on B.
 
 This means that if you trigger a build of A, then first B is built and only

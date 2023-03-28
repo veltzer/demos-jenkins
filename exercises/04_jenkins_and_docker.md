@@ -16,6 +16,9 @@ FROM python:3-alpine
 RUN pip install pytest
 ================
 
+* create the image with the command:
+`docker build --tag python_with_pytest .`
+
 * to install docker on your machine use:
 $ sudo apt install docker.io
 
@@ -32,6 +35,9 @@ kill the process with
 `kill -9 [PID]`
 run it again:
 `java -jar jenkins.war &`
+
+* to make your pipeline run in a docker container add the following line to it:
+    agent { docker { image 'python_with_pytest:latest' } }
 
 References:
 - https://www.jenkins.io/doc/book/pipeline/docker/

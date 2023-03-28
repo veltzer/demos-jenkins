@@ -1,8 +1,8 @@
 The idea behind this exercise is to run pipelines in docker.
 
-* Install the docker plugin.
+* Install the `Docker Pipeline` plugin.
 
-* Select a docker image from docker hub which has slim python.
+* Select a docer image from docker hub which has slim python (`python:3-alpine`)
 
 * Configure the pipeline to run inside this docker
 	(all you need to change is the "agent" line)

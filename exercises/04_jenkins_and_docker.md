@@ -25,5 +25,13 @@ and restart docker
 
 * to support docker at the jenkins level add the 'Docker Pipeline' plugin and restart jenkins.
 
+* to restart your jenkins if you are running it with "java -jar jenkins.war":
+find the pid of the java jenkins process
+`ps -ef | grep java`
+kill the process with
+`kill -9 [PID]`
+run it again:
+`java -jar jenkins.war &`
+
 References:
 - https://www.jenkins.io/doc/book/pipeline/docker/

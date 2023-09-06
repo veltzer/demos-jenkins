@@ -1,0 +1,34 @@
+pipeline {
+    agent {
+        label 'unix'
+    }
+
+    parameters {
+        choice choices: ['Selenium', 'Cypress'], description: 'Please choose an environment', name: 'TEST_ENV'
+    }
+
+    stages {
+        stage('Selenium Run') {
+                when {
+                    anyOf {
+                        environment name: 'TEST_ENV', value: 'Selenium'
+                    }
+                }
+                steps {
+                    echo 'Running Tests '
+                    echo 'Run selenium tests'
+                }
+        }
+        stage('Cypress Run') {
+            when {
+                anyOf {
+                    environment name: 'TEST_ENV', value: 'Cypress'
+                }
+            }
+            steps {
+                echo 'Running Tests'
+                echo 'Run Cypress tests'
+            }
+        }
+    }
+}

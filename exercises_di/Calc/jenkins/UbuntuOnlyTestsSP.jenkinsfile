@@ -1,0 +1,25 @@
+node('ubuntu') {
+    def mvnHome
+    def javaHome
+    stage('Preparation') {
+        git 'https://github.com/kpassoubady/Calc.git'
+        mvnHome = tool 'MVN-UBUNTU'
+        javaHome = tool 'JDK11-UBUNTU'
+    }
+    stage('Build') {
+        // Run the maven build
+        withEnv([
+                "MVN_HOME=$mvnHome",
+                "JAVA_HOME=$javaHome",
+                "PATH=$javaHome/bin:$PATH"
+        ]) {
+            ansiColor('xterm') {
+                sh '"$MVN_HOME/bin/mvn" clean test'
+            }
+        }
+    }
+    stage('Results') {
+        junit '**/target/surefire-reports/TEST-*.xml'
+        archiveArtifacts 'target/*.jar'
+    }
+}

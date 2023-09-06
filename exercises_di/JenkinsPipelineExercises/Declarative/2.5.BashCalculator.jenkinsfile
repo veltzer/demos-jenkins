@@ -1,0 +1,46 @@
+pipeline {
+
+    agent {
+        label 'unix'
+    }
+
+    parameters {
+        string (defaultValue: '10', description: 'Please give me a number', name: 'FIRST', trim: true)
+        string (defaultValue: '20', description: 'Please give me a number', name: 'SECOND', trim: true)
+        choice (choices: ['1. Addition', '2. Subtraction', '3. Multiplication', '4. Division'], description: 'Please select a choice', name: 'OPERATION')
+    }
+
+    stages {
+        stage('Run Calculator') {
+            steps {
+            sh label: 'calculator', returnStdout: true, script: '''
+            #!/bin/bash
+            readlink -f $(which sh)
+            # Take user Input
+            a=${FIRST}
+            b=${SECOND}
+            echo "First number : ${FIRST}"
+            echo "Second number : ${SECOND}"
+            echo "Operation Choice : ${OPERATION}"
+            # type of operation select only first letter
+            #ch=${OPERATION:0:1}
+            ch=`echo ${OPERATION} | cut -c1-1`
+            #ch=1
+            echo "Operation Choice : ${ch}"
+            # Switch Case to perform
+            # calulator operations
+            case $ch in
+            1)res=`echo $a + $b | bc`
+            ;;
+            2)res=`echo $a - $b | bc`
+            ;;
+            3)res=`echo $a \\* $b | bc`
+            ;;
+            4)res=`echo "scale=2; $a / $b" | bc`
+            ;;
+            esac
+            echo "Result : $res" '''
+            }
+        }
+    }
+}

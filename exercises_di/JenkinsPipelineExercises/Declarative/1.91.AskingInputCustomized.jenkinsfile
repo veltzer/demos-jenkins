@@ -1,0 +1,22 @@
+pipeline{
+    agent{
+        label "unix"
+    }
+    stages{
+        stage("Asking input"){
+            input {
+                message 'Ok to deploy in Production'
+                ok 'Yes Proceed'
+                submitter 'kangs, chris'
+                parameters {
+                    string defaultValue: 'KANGS', description: 'Please enter who can authorize', 
+                    name: 'DEPLOY_AUTH_USER', trim: true
+                }
+            }
+            steps{
+                echo "========Asking for confirmation========"
+                echo "Hello, ${DEPLOY_AUTH_USER}, thank you for taking an action!!!"
+            }
+        }
+    }
+}

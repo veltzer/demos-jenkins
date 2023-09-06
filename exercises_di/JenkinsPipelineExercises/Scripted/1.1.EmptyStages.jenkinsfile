@@ -1,0 +1,9 @@
+node {
+    echo 'Demo for Stage'
+
+    stage('Dev') {}
+    stage ('QA-Stage') {}
+    stage ('QA') {}
+    stage ('Prod-Copy') {}
+    stage ('Prod') {}
+}

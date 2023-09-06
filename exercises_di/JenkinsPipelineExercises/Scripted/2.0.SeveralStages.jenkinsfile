@@ -1,0 +1,22 @@
+node('unix') {
+   echo 'START --> STAGES'
+   
+   stage('Gather Input') {
+       echo "I will get some parameters later"
+   }
+   
+   stage("Build") {
+       echo "This is build step"
+   }
+   
+   stage("Test") {
+       echo "This is test step"
+   }
+   
+   stage("Deploy") {
+       echo "This is deploy step"
+   }
+   
+   echo 'END --> STAGES'
+
+}

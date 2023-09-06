@@ -1,0 +1,25 @@
+node {
+    echo 'Demo for Stage'
+    def slackChannel = "#202210-advanced-jenkins"
+    def jobName = "${JOB_NAME}"
+    stage('Dev') {
+        slackSend channel: slackChannel, color: '#39EA0E', 
+        message: 'Started In Dev:' + jobName, 
+        teamDomain: 'jenkinsschool', tokenCredentialId: 'slackCredentialsID'
+    }
+    stage ('QA-Stage') {
+        slackSend channel: slackChannel, color: '#39EA0E', 
+        message: 'Started In QA Stage:' + jobName, 
+        teamDomain: 'jenkinsschool', tokenCredentialId: 'slackCredentialsID'
+    }
+    stage ('QA') {
+        slackSend channel: slackChannel, color: '#39EA0E', 
+        message: 'Your approval is required, please login to Jenkins for approval:' + jobName, 
+        teamDomain: 'jenkinsschool', tokenCredentialId: 'slackCredentialsID'
+    }
+    stage ('Prod-Copy') {}
+    timeout(time: 15, unit: "MINUTES") {
+        input message: 'Do you want to approve the deploy in production?', ok: 'Yes'
+    }
+    stage ('Prod') {}
+}

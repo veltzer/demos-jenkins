@@ -1,0 +1,64 @@
+pipeline {
+    agent {
+        label 'built-in'
+    }
+    stages {
+        stage('gather parameters') {
+            steps {
+                echo "gather parameters"
+            }
+        }
+        stage('checkout') {
+            steps {
+                echo "Checkout scm"
+                //sh "exit 1"
+            }
+        }
+        stage('build') {
+            steps {
+                echo "build mvn project"
+            }
+        }
+        stage('run tests in parallel') {
+            parallel {
+                stage('e2e tests on ubuntu') {
+                    agent {
+                        label 'unix'
+                    }
+                    steps {
+                        echo "Running firefox tests"
+                        //sh "exit 1"
+                    }
+                }
+                stage('e2e tests on windows') {
+                    agent {
+                        label 'win'
+                    }
+                    steps {
+                        echo "Running ie tests"
+                    }
+                }
+                stage('e2e tests on linux') {
+                    agent {
+                        label 'win'
+                    }
+                    steps {
+                        echo "Running Opera tests"
+                    }
+                }
+            }
+        }
+        
+        stage("Gather input") {
+            steps {
+                echo "Gather input"
+            }
+        }
+        
+        stage('publish results') {
+            steps {
+                echo "build mvn project"
+            }
+        }
+    }
+}

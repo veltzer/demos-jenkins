@@ -1,0 +1,25 @@
+node('unix') {
+    echo 'START --> environment variable usage'
+
+    stage('Dev') {
+        echo "Job url: $env.JOB_URL"
+    }
+
+    stage ('QA-Stage') {
+        echo "Jenkins Home: $env.JENKINS_HOME"
+    }
+
+    stage ('QA') {
+        echo "Jenkins URL: ${JENKINS_URL}"
+    }
+
+    stage ('Prod-Copy') {
+        echo "Executor Number: $env.EXECUTOR_NUMBER"
+    }
+
+    stage ('Prod') {
+        echo "Node Name: $env.NODE_NAME"
+    }
+    
+    echo 'END --> environment variable usage'
+}

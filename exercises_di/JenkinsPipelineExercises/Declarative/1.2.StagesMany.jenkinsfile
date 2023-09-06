@@ -1,0 +1,77 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('inital') {
+            steps {
+                echo 'initial'
+            }
+        }
+
+        stage('compile') {
+            steps {
+                echo 'compile'
+            }
+        }
+
+        stage('build') {
+            steps {
+                echo 'build'
+            }
+        }
+
+        stage('unit') {
+            steps {
+                echo 'unit test cases'
+            }
+        }
+
+        stage('code coverage') {
+            steps {
+                echo 'code coverage'
+            }
+        }
+
+        stage('sonar qube') {
+            steps {
+                echo 'sonarqube'
+            }
+        }
+
+        stage('security') {
+            steps {
+                echo 'security check'
+            }
+        }
+
+        stage('integration') {
+            steps {
+                echo 'integration'
+            }
+        }
+
+        stage('deploy') {
+            steps {
+                echo 'deploy'
+            }
+        }
+
+        stage('post validation') {
+            steps {
+                echo 'post validation'
+            }
+        }
+
+        stage('post smoke') {
+            steps {
+                echo 'post smoke'
+            }
+        }
+
+        stage('post contract') {
+            steps {
+                echo 'post contract check'
+            }
+        }
+    }
+}

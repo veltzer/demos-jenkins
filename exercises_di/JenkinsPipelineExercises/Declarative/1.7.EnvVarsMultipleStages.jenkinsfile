@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('info') {
+            steps {
+                echo "Job Name: $env.JOB_NAME"
+            }
+        }
+        stage('Build Info') {
+            steps {
+                echo "Build Url: $env.BUILD_URL"
+            }
+        }
+        stage('Job Info') {
+            steps {
+                echo "Job Url: $env.JOB_URL"
+            }
+        }
+    }
+}

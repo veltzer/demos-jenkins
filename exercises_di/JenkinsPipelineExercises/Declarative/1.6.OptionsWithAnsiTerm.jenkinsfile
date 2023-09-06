@@ -1,0 +1,25 @@
+pipeline{
+    agent{
+        label "unix"
+    }
+
+    options {
+        ansiColor('xterm')
+        quietPeriod 10
+        buildDiscarder logRotator(artifactDaysToKeepStr: '10', artifactNumToKeepStr: '10', daysToKeepStr: '5', numToKeepStr: '5')
+    }
+
+    stages{
+        stage("Ansi Color Codes"){
+            steps{
+                echo "========Showing Ansi Color Code========"
+                sh script: ''' echo "Howdy?"
+                echo -e "\\e[92mSalesforce"
+                echo -e "\\e[91mKavinSchool"
+                echo -e "\\e[96mWelcome to Summer"
+                echo -e "\\e[97mLearning Declarative pipeline is fun"
+                '''
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+node('unix') {
+    echo "Hello World"
+    stage("Hello World") {
+        echo "Howdy?"
+    }
+}

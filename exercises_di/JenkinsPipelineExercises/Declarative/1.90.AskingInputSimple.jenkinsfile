@@ -1,0 +1,33 @@
+pipeline {
+    agent {
+        label "unix"
+    }
+
+    parameters {
+        string defaultValue: 'Kangs', description: 'Please enter your user name', name: 'USER_NAME', trim: true
+        string defaultValue: '10', description: 'Please enter number of pings', name: 'WAIT_TIME', trim: true
+    }
+
+    options {
+        quietPeriod 5
+        buildDiscarder logRotator(artifactDaysToKeepStr: '5', artifactNumToKeepStr: '5', daysToKeepStr: '5', numToKeepStr: '5')
+    }
+
+    stages {
+        stage("Unix Hello World"){
+            input {
+                message 'Do you want to proceed to deployment to staging?'
+            }
+
+            steps{
+                echo "========Getting Started========"
+                sh '''  echo "Hello World" > world.txt
+                        echo "User Name is $USER_NAME"
+                        echo "My Job Name is ${JOB_NAME}"
+                        sleep ${WAIT_TIME}s
+                        
+                        echo "This is the final line" >> world.txt'''
+            }
+        }
+    }
+}

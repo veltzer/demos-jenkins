@@ -10,18 +10,21 @@ The idea behind this exercise is to run pipelines in docker.
 * Check that you can run the build inside docker
 
 
-* Here is a dockerfile to build a docker with python and pytest:
-`FROM python:3-alpine
-RUN pip install pytest`
-
-* create the image with the command:
-`docker build --tag python_with_pytest .`
+* Here is how to build the docker image on the jenkins machine command line:
+    * create a new folder
+    * in the new folder create a file called Dockerfile with the following content:
+        `FROM python:3-alpine
+        RUN pip install pytest`
+    * build the docker image with the command:
+        `docker build --tag python_with_pytest .`
+    * see that your image was built using:
+        `$ docker images`
 
 * to install docker on your machine use:
-$ sudo apt install docker.io
+`$ sudo apt install docker.io`
 
 * to add auser to the docker group so that he will be able to use docker use:
-$ sudo adduser $USER docker
+`$ sudo adduser $USER docker`
 and logout and login.
 
 * to support docker at the jenkins level add the 'Docker Pipeline' plugin and restart jenkins.

@@ -12,3 +12,16 @@
 * Run a jenkins job and see how jenkins pulls your code from github and tests it.
 	(This is done from the Jenkins GUI).
 * You may need to install 'pytest' on your machine so that jenkins could use it.
+
+Hints:
+* here is a python function that adds two integers and returns their sum:
+    ====== add.py ========
+    def add(a, b):
+        return a+b
+* here is a test for that function:
+    ====== tests/test_add.py =======
+    from add import add
+    def test_add():
+        assert add(2,2)==4
+* to install pytest use:
+    $ pip install pytest

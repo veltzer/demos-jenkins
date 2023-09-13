@@ -11,10 +11,8 @@ The idea behind this exercise is to run pipelines in docker.
 
 
 * Here is a dockerfile to build a docker with python and pytest:
-================
-FROM python:3-alpine
-RUN pip install pytest
-================
+`FROM python:3-alpine
+RUN pip install pytest`
 
 * create the image with the command:
 `docker build --tag python_with_pytest .`
@@ -24,7 +22,7 @@ $ sudo apt install docker.io
 
 * to add auser to the docker group so that he will be able to use docker use:
 $ sudo adduser $USER docker
-and restart docker
+and logout and login.
 
 * to support docker at the jenkins level add the 'Docker Pipeline' plugin and restart jenkins.
 

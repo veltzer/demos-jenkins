@@ -1,5 +1,8 @@
-Develop a python code + pytest style project using the "freestyle" jenkins project type.
+# Freestyle Project
 
-You should use the "freestyle" jenkins project for this exercise.
+* Develop a python code + pytest style project using the "freestyle" jenkins project type.
 
-Here is a link about how to do it for java, adjust it for python: https://www.guru99.com/create-builds-jenkins-freestyle-project.html
+* You should use the "freestyle" jenkins project for this exercise.
+
+References:
+* [create-freestyle-project](https://www.guru99.com/create-builds-jenkins-freestyle-project.html)

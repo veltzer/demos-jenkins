@@ -1,8 +1,10 @@
+# Multi Branch Pipeline
+
 The idea behind this exercise is to have jenkins do different things for different branches.
 
 You should use the "multibranch" jenkins project for this
 
-Documentation is here https://www.jenkins.io/doc/book/pipeline/multibranch/
+Documentation is [here](https://www.jenkins.io/doc/book/pipeline/multibranch)
 
 * Connect this project to one of your github repo.
 

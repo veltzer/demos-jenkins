@@ -1,3 +1,5 @@
+# Jenkins and Docker
+
 The idea behind this exercise is to run pipelines in docker.
 
 * Install the `Docker Pipeline` plugin.
@@ -12,7 +14,7 @@ The idea behind this exercise is to run pipelines in docker.
 * Select a docer image from docker hub which has slim python (`python:3-alpine`)
 
 * Configure the pipeline to run inside this docker
-	(all you need to change is the "agent" line)
+    (all you need to change is the "agent" line)
 
 * Check that you can run the build inside docker
 
@@ -47,4 +49,4 @@ run it again:
     agent { docker { image 'python_with_pytest:latest' } }
 
 References:
-- https://www.jenkins.io/doc/book/pipeline/docker/
+* [docker pipeline](https://www.jenkins.io/doc/book/pipeline/docker)

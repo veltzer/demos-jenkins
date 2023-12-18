@@ -5,4 +5,4 @@
 
 * Use labels to designate which should run on linux and which on windows
 
-* sleep to sleep in both jobs and see that the time the jobs took is not the sum of sleep times. 
+* sleep to sleep in both jobs and see that the time the jobs took is not the sum of sleep times.

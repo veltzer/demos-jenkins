@@ -1,13 +1,14 @@
+# Connect Github to Jenkins
+
 The idea of this exercise is that every push to
 your github repo will cause jenkins to rerun your pipeline (tests).
 
 short description
 You will have to confiure this at BOTH ENDS.
-	* configure github to send notifications to your jenkins when the source code changes.
-	* configure jenkins to respond to such notifications by running the pipeline.
+    * configure github to send notifications to your jenkins when the source code changes.
+    * configure jenkins to respond to such notifications by running the pipeline.
 
 * you can find plenty of guides on how to configure both github and jenkins.
-
 
 long description
 
@@ -26,9 +27,9 @@ hints
 Phase 3
 Make sure that the outside world can access your linux box on port 80
 You may need to:
-	* configure your router
-	* configure your hypervisor to trafer port 80 requests to your linux virtual machine.
-	* you may need to open the port in either your windows firewall or your linux firewall or both.
+    * configure your router
+    * configure your hypervisor to trafer port 80 requests to your linux virtual machine.
+    * you may need to open the port in either your windows firewall or your linux firewall or both.
 
 Phase 4
 Configure github to send a message to your jenkins whenever a commit is done (there are guides for this

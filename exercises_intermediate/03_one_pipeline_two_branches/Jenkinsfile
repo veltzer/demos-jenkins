@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build and Test') {
+            steps {
+                script {
+                    def branchTasks = [
+                        'origin/main': {
+                            echo 'Running tasks for the main branch'
+                        },
+                        'origin/test': {
+                            echo 'Running tasks for the test branch'
+                        }
+                    ]
+                    def branchTask = branchTasks[GIT_BRANCH] ?: {
+                        echo "Running default tasks for branch: ${GIT_BRANCH}"
+                    }
+                    branchTask.call()
+                }
+            }
+        }
+    }
+}

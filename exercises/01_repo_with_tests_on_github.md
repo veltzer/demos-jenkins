@@ -4,7 +4,7 @@
 * add some python code to your repo, for example,
 	add a python function called add(a,b) in a file called add.py that returns a+b
 * add a test to your code using pytest or unittest (look it up).
-	* check that add(2,2)==4
+	* check that `add(2,2)==4`
 * push you code to you github repo.
 * Configure a pipeline job in jenkins and connect it to your github repository.
 	Tell the pipeline to use the "Jenkinsfile" in your source repository.
@@ -16,13 +16,17 @@
 
 Hints:
 * here is a python function that adds two integers and returns their sum:
-    ====== add.py ========
+    `add.py`
+    ```python
     def add(a, b):
         return a+b
+    ```
 * here is a test for that function:
-    ====== tests/test_add.py =======
+    `tests/test_add.py`
+    ``` python
     from add import add
     def test_add():
         assert add(2,2)==4
+    ```
 * to install pytest use:
-    $ pip install pytest
+    `$ pip install pytest`

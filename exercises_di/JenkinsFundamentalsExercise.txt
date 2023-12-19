@@ -1,0 +1,227 @@
+Exercises 1:  
+
+1.  In Jenkins Create a New Item 
+2.  Select Free Style Job 
+3.  Name <Change>-WIN-HELLO-WORLD 
+4.  DescripIon: Hello World 
+5.  Restrict where this project can be run: Win (Select a windows node) 
+6.  This Project is Parameterized 
+
+a.  String Parameter: USER_NAME 
+b.  DescripIon: Please enter your username 
+c.   
+d.  String Parameter 2: NUM_OF_PINGS 
+
+i.  DescripIon: Please enter number of pings 
+
+7.  Build Steps --> Add Build Steps --> Windows Batch/Commend  
+
+echo "Hello world!!" 
+echo "USER_NAME is %USER_NAME%" 
+echo "Hello %USER_NAME%" 
+echo "My job name is %JOB_NAME%" 
+ping 127.0.0.1 -n %NUM_OF_PINGS% 1>nul 
+
+•  Save, run couple of Ime with diﬀerent parameters. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Exercises 2: 
+
+1.  Create a new item --> <Change>-UNIX-Hello-World 
+2.  Create a Free Style Job 
+3.  Check This project is parameterized à Create 2 parameters. 
+
+a.  USER_NAME  
+
+i.  Add Parameter à  String Parameter 
+ii.  Default Value à Kangs 
+iii.  Description à <h3 style="color:red;">Pease enter your user name</h3> 
+
+b.  SLEEP_TIME 
+
+i.   Add Parameter à  - String Parameters 
+ii.  Default Value: 5 
+iii.  Description à Please enter the sleep time in seconds. 
+4.  Restrict where this project needs to be Run: unix (select a unix node) 
+5.  Build Steps --> Execute Shell 
+
+  echo "Hello World" 
+
+  echo "User name is ${USER_NAME}" > info.txt 
+
+  date >> info.txt 
+
+  sleep ${SLEEP_TIME}s 
+
+6.  Post Build actions 
+7.  Archive Artifacts (*.txt) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Exercise 3: 
+
+1.  Create a new item à <Change>-UNIX-GITHUB-ASTRISK-PYRAMID 
+2.  Create a Free Style Job 
+3.  Check This Project is Parameterized à Create 1 parameter. 
+
+a.  NUMBER_OF_ROWS 
+
+i.  Type: String Parameters 
+ii.  Default Value: 8 
+iii.  Description: Please enter number of rows 
+
+4.  Restrict where this project can be run 
+a.  Select (or) type: unix 
+
+5.  Source Code Management 
+
+a.  Repository URL: https://github.com/kpassoubady/unix_shell_scripts.git 
+b.  Branches to build: */master 
+c.  Git Executable: GIT-UNIX 
+
+6.  Build Steps 
+
+a.  Add Build Step à Execute Shell 
+b.  Command 
+
+chmod +x ./astrisk-pyramid.sh 
+./astrisk-pyramid.sh 
+
+7.  Click Save 
+8.  Click Build with Parameters with different values. 
+9.  Go to Console Output à See the output shown. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Exercise 4: 
+
+1.  Create a new item à <Change>-UNIX-CHECK-PRIME-NUMBER 
+2.  Create a Free Style Job 
+3.  Check This Project is Parameterized à Create 1 parameter. 
+
+a.  NUM 
+
+i.  Type: String Parameters 
+ii.  Default Value: 8 
+iii.  Description: Please enter number of rows 
+
+4.  Restrict where this project can be run. 
+
+a.  Select (or) type: unix 
+
+5.  Build Steps 
+
+a.  Add Build Step à Execute Shell 
+b.  Command 
+
+#!/bin/bash 
+
+number=$NUM 
+i=2 
+ﬂag=0 
+while test $i -le `expr $number / 2` 
+do 
+    if test `expr $number % $i` -eq 0 
+    then 
+        ﬂag=1 
+    ﬁ 
+    i=`expr $i + 1` 
+done  
+if test $ﬂag -eq 1 
+then 
+    echo "The number $NUM is not a prime" 
+else 
+    echo "The number $NUM is Prime" 
+ﬁ 
+
+6.  Under Build Triggers à Check Build Periodically  
+
+TZ=PST 
+H/30 * * * * 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7.  General à Discard Old Builds 
+a.  Strategy: Log Rotation 
+b.  Days to keep builds: 7 
+c.  Max # of builds to keep: 365 
+
+8.  Under Post Build Actions à Add Post-Build Action à E-mail Notifications 
+
+a.  Recipients: changeme@yourdomain.com 
+b.  Check Send e-mail for every unstable build 
+
+9.  Under Post Build Actions à Add Post-Build Action à Slack Notifications 
+
+a.  Check Notify Build Start, Success, Aborted, Unstable, Every Failure etc. 
+
+10. Click Save 
+11. Click Build with Parameters and provide different values. Run few times. 
+12. Change the H/30 with different values and see how the build automatically runs. 
+13. Go to Console Output à See the output shown. 
+
+ 
+

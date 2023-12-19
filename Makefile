@@ -6,7 +6,7 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do spell check on all?
-DO_MD_ASPELL:=0
+DO_MD_ASPELL:=1
 # do you want to run mdl on md files?
 DO_MD_MDL:=1
 # do you want to lint python files?

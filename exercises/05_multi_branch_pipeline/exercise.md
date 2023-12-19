@@ -6,9 +6,9 @@ You should use the "multibranch" jenkins project for this
 
 Documentation is [here](https://www.jenkins.io/doc/book/pipeline/multibranch)
 
-* Connect this project to one of your github repo.
+* Connect this project to one of your GitHub repo.
 
-* Create a branch called "feature_x" in your github repo.
+* Create a branch called "feature_x" in your GitHub repo.
 
 * Configure jenkins to run "Jenkinsfile" when there are commits to the "master/main" branch
 

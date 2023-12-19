@@ -4,14 +4,14 @@ The idea behind this exercise is to run pipelines in docker.
 
 * Install the `Docker Pipeline` plugin.
 
-* change the "agent" clause in your Jenkinfile to something like this:
+* change the "agent" clause in your Jenkinsfile to something like this:
 `
     agent {
         docker { image '[the_image_name_that_you_will_build_later]' }
     }
 `
 
-* Select a docer image from docker hub which has slim python (`python:3-alpine`)
+* Select a docker image from docker hub which has slim python (`python:3-alpine`)
 
 * Configure the pipeline to run inside this docker
     (all you need to change is the "agent" line)
@@ -31,7 +31,7 @@ The idea behind this exercise is to run pipelines in docker.
 * to install docker on your machine use:
 `$ sudo apt install docker.io`
 
-* to add auser to the docker group so that he will be able to use docker use:
+* to add a user to the docker group so that he will be able to use docker use:
 `$ sudo adduser $USER docker`
 and logout and login.
 

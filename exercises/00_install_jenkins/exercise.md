@@ -21,9 +21,9 @@
 * play around with the GUI.
 
 ## Installing from an apt repository
-Consult [this](https://www.jenkins.io/doc/book/installing/linux) url
+Consult [this](https://www.jenkins.io/doc/book/installing/linux) URL
 under "Long Term Support Release"
-and follow the instructions for installing jenkins on ubuntu.
+and follow the instructions for installing jenkins on Ubuntu.
 
 Because of signing issues you may need to do:
     `$ sudo apt-get update --allow-unauthenticated`
@@ -49,13 +49,13 @@ If you have more than one java installed you can select version 11 using:
 ## Instructions for people who cannot reach their cloud machine at port 8080
 * You must be connected with MobaXterm to do this.
 
-* install firefox on your remote machine:
+* install Firefox on your remote machine:
 
 ```shell
 sudo apt install firefox
 ```
 
-* run firefox in the background
+* run Firefox in the background
 
 ```shell
 firefox &
@@ -63,4 +63,4 @@ firefox &
 
 * Firefox should, after the appropriate wait time, appear on your windows desk
 
-* Point your firefox to [this](http://localhost:8080)
+* Point your Firefox to [this](http://localhost:8080)

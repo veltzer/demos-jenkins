@@ -1,5 +1,5 @@
-# Create a github account with repo
+# Create a GitHub account with repo
 
-* Create an account on github (if you don't alredy have one).
+* Create an account on GitHub (if you don't already have one).
 
-* Create a repository on github called "test" which is *public*.
+* Create a repository on GitHub called "test" which is *public*.

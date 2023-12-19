@@ -1,10 +1,10 @@
 # Github workflow
 
-The objective is to see how CICD is done at github
+The objective is to see how CICD is done at GitHub
 
-* Create an account on github (if you don't already have one)
+* Create an account on GitHub (if you don't already have one)
 
-* Create a repository on github
+* Create a repository on GitHub
 
 * Put some python code with tests into your repository.
     [example](https://github.com/veltzer/demos-jenkins/tree/master/pytest_example)
@@ -13,7 +13,7 @@ The objective is to see how CICD is done at github
     `$REPO_ROOT/.github/workflows/build.yml`
     In the workflow, test your software.
 
-* Push your code to github and under "actions" see how the code builds.
+* Push your code to GitHub and under "actions" see how the code builds.
 
 * See what happens when tests pass and what happens when tests fail.
 

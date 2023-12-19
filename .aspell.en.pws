@@ -1,4 +1,4 @@
-personal_ws-1.1 en 973
+personal_ws-1.1 en 983 
 AARRR
 ACLs
 ADPlus
@@ -379,6 +379,7 @@ Observability
 OpenCL
 OpenEmbedded
 OpenGL
+OpenJDK
 OpenMP
 OpenSL
 OpenShift
@@ -431,6 +432,7 @@ RBMs
 RCU
 RDBMS
 RDTSC
+README
 RESTful
 RFI
 RNN
@@ -559,6 +561,7 @@ UML
 UTF
 UX
 Un
+Undeploy
 UnixWare
 VC
 VCS
@@ -607,6 +610,7 @@ allarch
 alloca
 allocator
 allocators
+amd
 analytics
 apis
 architected
@@ -617,6 +621,7 @@ async
 atomics
 autotools
 awk
+balancer
 balancers
 bbclass
 benchmarking
@@ -667,11 +672,13 @@ crypto
 csh
 cve
 cyclictest
+dataset
 datetime
 de
 debugfs
 debuggable
 defconfigs
+deliverables
 deque
 dereferencing
 destructor
@@ -701,6 +708,7 @@ eventfd
 exe
 executables
 execve
+extensibility
 facter
 facto
 fdisk
@@ -740,6 +748,8 @@ initramfs
 initrd
 inittab
 inotify
+intel
+interoperable
 interprocess
 io
 ioports
@@ -751,6 +761,7 @@ irqbalance
 ish
 isinstance
 jQuery
+jdk
 jenkins
 journaled
 jprobes
@@ -786,6 +797,7 @@ makefiles
 malloc
 mapOf
 mcheck
+md
 medoids
 mem
 memmap
@@ -796,6 +808,7 @@ mmiotrace
 mortem
 mprotect
 mq
+multibranch
 multicast
 multilib
 multivalue
@@ -817,6 +830,7 @@ oauth
 observability
 obstack
 obstacks
+openjdk
 oprofile
 os
 outputstream
@@ -867,6 +881,7 @@ rpath
 rpcgen
 rspec
 runnable
+runtime
 rwlocks
 safetiness
 sar
@@ -877,6 +892,7 @@ scalable
 scriptable
 sed
 sendfile
+serializable
 serializers
 serverless
 servicemesh
@@ -932,6 +948,7 @@ txt
 typedef
 uboot
 udev
+ui
 unicast
 uniq
 unittest
@@ -965,10 +982,3 @@ xloader
 xml
 xruns
 yml
-deliverables
-runtime
-intel
-interoperable
-extensibility
-dataset
-serializable

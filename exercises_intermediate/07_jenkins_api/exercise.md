@@ -6,4 +6,4 @@
 
 * write a script that will trigger the jenkins build of your project remotely. Use your token and username.
 
-* demostrate that you can trigger builds remotely.
+* demonstrate that you can trigger builds remotely.

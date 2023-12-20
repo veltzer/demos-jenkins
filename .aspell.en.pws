@@ -1,4 +1,4 @@
-personal_ws-1.1 en 983 
+personal_ws-1.1 en 985 
 AARRR
 ACLs
 ADPlus
@@ -598,6 +598,7 @@ XP
 XSS
 XXE
 Xenomai
+YAML
 Yaffs
 Yocto
 Yocto's
@@ -981,4 +982,5 @@ xargs
 xloader
 xml
 xruns
+yaml
 yml

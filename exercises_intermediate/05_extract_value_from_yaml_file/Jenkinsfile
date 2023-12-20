@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('read version') {
+            steps {
+                script {
+			def yamlContent = readYaml file: 'config.yaml'
+			def versionValue = yamlContent.version
+			echo "Version extracted from YAML: ${versionValue}"
+                }
+            }
+        }
+    }
+}

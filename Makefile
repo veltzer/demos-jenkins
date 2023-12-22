@@ -39,10 +39,8 @@ ifeq ($(DO_ALLDEP),1)
 endif # DO_ALLDEP
 
 # markdown
-MD_SRC:=$(shell find exercises exercises_intermediate -type f -and -name "*.md")
+MD_SRC:=$(shell find exercises -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
-MD_HTM:=$(addprefix out/,$(addsuffix .html,$(MD_BAS)))
-MD_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MD_BAS)))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 
@@ -74,6 +72,7 @@ debug:
 	$(info doing [$@])
 	$(info ALL is $(ALL))
 	$(info MD_SRC is $(MD_SRC))
+	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_MDL is $(MD_MDL))
 

@@ -1,43 +1,18 @@
-# *demmos-jenkins* project by Mark Veltzer
-
-description: Demos for Jenkins
-
-project website: https://veltzer.github.io/demmos-jenkins
-
-author: Mark Veltzer
+## demmos-jenkins
 
 version: 0.0.1
 
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+description: Demos for Jenkins
 
-## github
+website: https://veltzer.github.io/demmos-jenkins
 
-![License](https://img.shields.io/github/license/veltzer/demos-jenkins)
-
-## build
+## Build
 
 ![build](https://github.com/veltzer/demmos-jenkins/workflows/build/badge.svg)
 
-## pypi
 
-![PyPI - Status](https://img.shields.io/pypi/status/demos-jenkins)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/demos-jenkins)
-![PyPI - License](https://img.shields.io/pypi/l/demos-jenkins)
-![PyPI - Package Name](https://img.shields.io/pypi/v/demos-jenkins)
-![PyPI - Format](https://img.shields.io/pypi/format/demos-jenkins)
+## Contact
 
-## pypi download
-
-![PyPI - Downloads](https://img.shields.io/pypi/dd/demos-jenkins)
-![PyPI - Downloads](https://img.shields.io/pypi/dw/demos-jenkins)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/demos-jenkins)
-
-
-
-## contact me
-[mailto](mailto:mark.veltzer@gmail.com)
-![gitter](https://img.shields.io/gitter/room/veltzer/mark.veltzer)
-![discord](https://img.shields.io/discord/719336281624281119)
-![discord](https://img.shields.io/discord/719336282194444302)
+chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
 Mark Veltzer, Copyright © 2020, 2021, 2022, 2023

@@ -108,5 +108,5 @@ $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(Q)pymakehelper touch_mkdir $@
 $(PY_LINT): out/%.lint: %.py
 	$(info doing [$@])
-	$(Q)PYTHONPATH=python pylint --reports=n --score=n $<
+	$(Q)python -m pylint --reports=n --score=n $<
 	$(Q)pymakehelper touch_mkdir $@

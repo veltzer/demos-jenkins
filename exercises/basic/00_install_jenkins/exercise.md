@@ -6,7 +6,9 @@
         You will need to install docker, configure it properly.
     * war file
         use
+        ```shell
         $ java -jar [file.war]
+        ```
         The war file can be downloaded from [here](https://www.jenkins.io/download)
         You will need to install java if you don't already have it.
     * from binary distribution
@@ -26,7 +28,7 @@ under "Long Term Support Release"
 and follow the instructions for installing jenkins on Ubuntu.
 
 Because of signing issues you may need to do:
-    `$ sudo apt-get update --allow-unauthenticated`
+    ```$ sudo apt-get update --allow-unauthenticated```
 or
     `$ sudo apt-get update --allow-insecure-repositories`
 

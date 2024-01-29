@@ -31,20 +31,20 @@ or
     `$ sudo apt-get update --allow-insecure-repositories`
 
 the command:
-    $ sudo apt-get install jenkins
+    `$ sudo apt-get install jenkins`
 should pass with no issues if you did everything correctly.
 
 You will need to install java
 install openjdk version 11 like so:
-    $ sudo apt-get install openjdk-11-jdk:amd64
+    `$ sudo apt-get install openjdk-11-jdk:amd64`
 so
-    $ java --version
+    `$ java --version`
 should return:
     openjdk version "11.0.18" 2023-01-17
     OpenJDK Runtime Environment (build 11.0.18+10-post-Ubuntu-0ubuntu122.10)
     OpenJDK 64-Bit Server VM (build 11.0.18+10-post-Ubuntu-0ubuntu122.10, mixed mode, sharing)
 If you have more than one java installed you can select version 11 using:
-    $ sudo update-alternatives --config java
+    `$ sudo update-alternatives --config java`
 
 ## Instructions for people who cannot reach their cloud machine at port 8080
 * You must be connected with MobaXterm to do this.

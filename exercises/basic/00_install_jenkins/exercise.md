@@ -28,9 +28,13 @@ under "Long Term Support Release"
 and follow the instructions for installing jenkins on Ubuntu.
 
 Because of signing issues you may need to do:
-    ```$ sudo apt-get update --allow-unauthenticated```
+```shell
+$ sudo apt-get update --allow-unauthenticated
+```
 or
-    `$ sudo apt-get update --allow-insecure-repositories`
+```shell
+$ sudo apt-get update --allow-insecure-repositories
+```
 
 the command:
     `$ sudo apt-get install jenkins`
@@ -38,9 +42,13 @@ should pass with no issues if you did everything correctly.
 
 You will need to install java
 install openjdk version 11 like so:
-    `$ sudo apt-get install openjdk-11-jdk:amd64`
+```shell
+$ sudo apt-get install openjdk-11-jdk:amd64`
+```
 so
-    `$ java --version`
+```bash
+$ java --version
+```
 should return:
     openjdk version "11.0.18" 2023-01-17
     OpenJDK Runtime Environment (build 11.0.18+10-post-Ubuntu-0ubuntu122.10)

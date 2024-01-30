@@ -6,9 +6,11 @@
         You will need to install docker, configure it properly.
     * war file
         use
+
         ```shell
         $ java -jar [file.war]
         ```
+
         The war file can be downloaded from [here](https://www.jenkins.io/download)
         You will need to install java if you don't already have it.
     * from binary distribution
@@ -28,33 +30,47 @@ under "Long Term Support Release"
 and follow the instructions for installing jenkins on Ubuntu.
 
 Because of signing issues you may need to do:
+
 ```shell
-$ sudo apt-get update --allow-unauthenticated
+sudo apt-get update --allow-unauthenticated
 ```
+
 or
+
 ```shell
-$ sudo apt-get update --allow-insecure-repositories
+sudo apt-get update --allow-insecure-repositories
 ```
 
 the command:
-    `$ sudo apt-get install jenkins`
+
+```shell
+sudo apt-get install jenkins`
+```
+
 should pass with no issues if you did everything correctly.
 
 You will need to install java
 install openjdk version 11 like so:
+
 ```shell
-$ sudo apt-get install openjdk-11-jdk:amd64`
+sudo apt-get install openjdk-11-jdk:amd64`
 ```
+
 so
+
 ```bash
-$ java --version
+java --version
 ```
+
 should return:
     openjdk version "11.0.18" 2023-01-17
     OpenJDK Runtime Environment (build 11.0.18+10-post-Ubuntu-0ubuntu122.10)
     OpenJDK 64-Bit Server VM (build 11.0.18+10-post-Ubuntu-0ubuntu122.10, mixed mode, sharing)
 If you have more than one java installed you can select version 11 using:
-    `$ sudo update-alternatives --config java`
+
+```shell
+sudo update-alternatives --config java
+```
 
 ## Instructions for people who cannot reach their cloud machine at port 8080
 * You must be connected with MobaXterm to do this.

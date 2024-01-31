@@ -55,3 +55,5 @@ pipeline {
     }
 }
 ```
+
+* Check that your pipeline runs successfully.

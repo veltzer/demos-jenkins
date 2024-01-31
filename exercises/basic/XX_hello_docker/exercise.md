@@ -1,4 +1,4 @@
-# "Hello Docker" for Jenkins
+# `Hello Docker` for Jenkins
 
 * install docker on your ubuntu machine and make sure that it is running:
 
@@ -47,9 +47,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                step {
-                    sh 'python --version'
-                }
+                sh 'python --version'
             }
         }
     }

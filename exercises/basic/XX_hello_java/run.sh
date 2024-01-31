@@ -1,2 +1,2 @@
 #!/bin/bash
-mvn exec:java -Dexec.mainClass="com.company.HelloWorld"
+mvn exec:java -Dexec.mainClass="HelloWorld"

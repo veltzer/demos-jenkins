@@ -5,13 +5,12 @@ The idea behind this exercise is to run pipelines in docker.
 * Install the `Docker Pipeline` plugin.
 
 * change the `agent` clause in your Jenkinsfile to something like this:
-`
+
 ```groovy
 agent {
     docker { image '[put_your_image_name_here]' }
 }
 ```
-`
 
 * Select a docker image from docker hub which has slim python (`python:3-alpine`)
 
@@ -34,9 +33,11 @@ agent {
 `$ sudo apt install docker.io`
 
 * to add a user to the docker group so that he will be able to use docker use:
-```shelll
+
+```shell
 sudo adduser $USER docker`
 ```
+
 and logout and login.
 
 * to support docker at the jenkins level add the `Docker Pipeline` plugin and restart jenkins.

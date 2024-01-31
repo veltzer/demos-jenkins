@@ -4,17 +4,19 @@ The idea behind this exercise is to run pipelines in docker.
 
 * Install the `Docker Pipeline` plugin.
 
-* change the "agent" clause in your Jenkinsfile to something like this:
+* change the `agent` clause in your Jenkinsfile to something like this:
 `
-    agent {
-        docker { image '[the_image_name_that_you_will_build_later]' }
-    }
+```groovy
+agent {
+    docker { image '[put_your_image_name_here]' }
+}
+```
 `
 
 * Select a docker image from docker hub which has slim python (`python:3-alpine`)
 
 * Configure the pipeline to run inside this docker
-    (all you need to change is the "agent" line)
+    (all you need to change is the `agent` line)
 
 * Check that you can run the build inside docker
 
@@ -32,12 +34,14 @@ The idea behind this exercise is to run pipelines in docker.
 `$ sudo apt install docker.io`
 
 * to add a user to the docker group so that he will be able to use docker use:
-`$ sudo adduser $USER docker`
+```shelll
+sudo adduser $USER docker`
+```
 and logout and login.
 
-* to support docker at the jenkins level add the 'Docker Pipeline' plugin and restart jenkins.
+* to support docker at the jenkins level add the `Docker Pipeline` plugin and restart jenkins.
 
-* to restart your jenkins if you are running it with "java -jar jenkins.war":
+* to restart your jenkins if you are running it with `java -jar jenkins.war`:
 find the pid of the java jenkins process
 `ps -ef | grep java`
 kill the process with
@@ -46,7 +50,10 @@ run it again:
 `java -jar jenkins.war &`
 
 * to make your pipeline run in a docker container add the following line to it:
-    agent { docker { image 'python_with_pytest:latest' } }
+
+```groovy
+agent { docker { image 'python_with_pytest:latest' } }
+```
 
 References:
 * [docker pipeline](https://www.jenkins.io/doc/book/pipeline/docker)

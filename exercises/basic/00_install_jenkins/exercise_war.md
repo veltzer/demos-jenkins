@@ -2,6 +2,7 @@
 
 * you need
         use
-        ```shell
-        $ java -jar [file.war]
-        ```
+
+```shell
+java -jar [file.war]
+```

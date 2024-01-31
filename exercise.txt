@@ -1,0 +1,7 @@
+Write a jenkins pipeline that runs two things in parallel:
+	sleep 5 and sleep 10
+You need to find out the following things:
+- how do I write a pipeline in jenkins?
+- how do I do things in parallel in jenkins?
+- how do I go to sleep in jenkins.
+- add the blue ocean plugin and see a graphic representation of your pipeline.

@@ -36,3 +36,7 @@ Configure GitHub to send a message to your jenkins whenever a commit is done (th
 over internet - look for GitHub/jenkins integration)
 Configure Jenkins to receive such message and deactivate the polling you configured in phase 2
 Push and enjoy (you should see jenkins run tests automatically on every push to GitHub).
+
+## References
+
+* [link](https://www.blazemeter.com/blog/how-to-integrate-your-github-repository-to-your-jenkins-project)

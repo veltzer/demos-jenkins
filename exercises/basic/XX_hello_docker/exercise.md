@@ -1,6 +1,6 @@
 # `Hello Docker` for Jenkins
 
-* install docker on your ubuntu machine and make sure that it is running:
+* install docker on your Ubuntu machine and make sure that it is running:
 
 ```shell
 sudo apt install docker.io
@@ -25,11 +25,11 @@ ps -ef | grep docker
 ps -ef | grep jenkins.war
 ```
 
-```
+```shell
 kill [pid]
 ```
 
-```
+```shell
 java -jar jenkins.war &
 ```
 

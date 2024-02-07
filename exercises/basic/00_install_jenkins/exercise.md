@@ -1,7 +1,6 @@
 # Install Jenkins
 
 * install jenkins in the following ways:
-<<<<<<< HEAD
     * docker
         follow the instructions on the jenkins website.
         You will need to install docker, configure it properly.
@@ -14,8 +13,6 @@
 
         The war file can be downloaded from [here](https://www.jenkins.io/download)
         You will need to install java if you don't already have it.
-=======
->>>>>>> 632d618 (no commit message given)
     * from binary distribution
         download, unzip and run
         You will need to install java if you don't already have it.

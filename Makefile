@@ -95,6 +95,11 @@ check:
 subsection_stats:
 	$(Q)git grep -h '^## ' -- "*.md" | sort -u
 
+.PHONY: spell_many
+spell_many:
+	$(info doing [$@])
+	$(Q)aspell_many.sh $(MD_SRC)
+
 ############
 # patterns #
 ############

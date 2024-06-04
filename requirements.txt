@@ -2,9 +2,9 @@ alabaster==0.7.16
 astroid==3.2.2
 attrs==23.2.0
 Babel==2.15.0
-certifi==2024.2.2
+certifi==2024.6.2
 charset-normalizer==3.3.2
-coverage==7.5.1
+coverage==7.5.3
 dill==0.3.8
 docutils==0.21.2
 flake8==7.0.0
@@ -39,7 +39,7 @@ pytest==8.2.1
 pytest-cov==5.0.0
 PyYAML==6.0.1
 referencing==0.35.1
-requests==2.32.2
+requests==2.32.3
 rpds-py==0.18.1
 smmap==5.0.1
 snowballstemmer==2.2.0
@@ -54,7 +54,7 @@ termcolor==2.4.0
 tomlkit==0.12.5
 types-chardet==5.0.4.6
 types-PyYAML==6.0.12.20240311
-typing_extensions==4.12.0
+typing_extensions==4.12.1
 urllib3==2.2.1
 venv-run==0.2.0
 yattag==1.15.2

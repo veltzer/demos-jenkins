@@ -4,4 +4,6 @@ packages=[
     # ruby stuff
     "ruby-bundler",
     "rbenv",
+    # for checking my shell scripts
+    "shellcheck",
 ]

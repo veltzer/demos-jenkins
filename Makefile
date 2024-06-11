@@ -11,6 +11,8 @@ DO_MD_ASPELL:=1
 DO_MD_MDL:=1
 # do you want to lint python files?
 DO_PY_LINT:=1
+# do you want to check bash syntax?
+DO_CHECK_SYNTAX:=1
 
 ########
 # code #
@@ -48,6 +50,10 @@ MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 PY_SRC:=$(shell find scripts -type f -and -name "*.py")
 PY_LINT:=$(addprefix out/,$(addsuffix .lint, $(basename $(PY_SRC))))
 
+# shell
+ALL_SH:=$(shell find exercises -name "*.sh")
+ALL_STAMP:=$(addprefix out/, $(addsuffix .stamp, $(ALL_SH)))
+
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
@@ -59,6 +65,10 @@ endif # DO_MD_MDL
 ifeq ($(DO_PY_LINT),1)
 ALL+=$(PY_LINT)
 endif # DO_PY_LINT
+
+ifeq ($(DO_CHECK_SYNTAX),1)
+ALL+=$(ALL_STAMP)
+endif # DO_CHECK_SYNTAX
 
 #########
 # rules #
@@ -75,6 +85,8 @@ debug:
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_MDL is $(MD_MDL))
+	$(info ALL_SH is $(ALL_SH))
+	$(info ALL_STAMP is $(ALL_STAMP))
 
 .PHONY: clean
 clean:
@@ -114,4 +126,8 @@ $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 $(PY_LINT): out/%.lint: %.py
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
+	$(Q)pymakehelper touch_mkdir $@
+$(ALL_STAMP): out/%.stamp: % .shellcheckrc
+	$(info doing [$@])
+	$(Q)shellcheck --severity=error --shell=bash --external-sources --source-path="$$HOME" $<
 	$(Q)pymakehelper touch_mkdir $@

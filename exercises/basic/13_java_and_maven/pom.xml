@@ -12,6 +12,11 @@
 	<version>1.0</version>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -36,9 +41,6 @@
 				<version>3.11.0</version>
 				<configuration>
 					<release>11</release>
-					<sourceDirs>
-						<sourceDir>src/main/java</sourceDir>
-					</sourceDirs>
 				</configuration>
 			</plugin>
 		</plugins>

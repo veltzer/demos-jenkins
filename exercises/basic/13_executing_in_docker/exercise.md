@@ -1,4 +1,4 @@
-# `Hello Docker` for Jenkins
+# `Executing in Docker` for Jenkins
 
 * install docker on your Ubuntu machine and make sure that it is running:
 

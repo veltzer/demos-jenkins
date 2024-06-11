@@ -1,4 +1,4 @@
-# `Hello Java` for jenkins
+# `Java and Maven` for jenkins
 
 * find a docker image in docker.hub which contains both java JDK and maven.
 

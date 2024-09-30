@@ -51,7 +51,7 @@ PY_SRC:=$(shell find scripts -type f -and -name "*.py")
 PY_LINT:=$(addprefix out/,$(addsuffix .lint, $(basename $(PY_SRC))))
 
 # shell
-ALL_SH:=$(shell find exercises -name "*.sh")
+ALL_SH:=$(shell find exercises -type f -and -name "*.sh")
 ALL_STAMP:=$(addprefix out/, $(addsuffix .stamp, $(ALL_SH)))
 
 ifeq ($(DO_MD_ASPELL),1)

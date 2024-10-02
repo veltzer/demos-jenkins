@@ -35,11 +35,6 @@ Q:=@
 #.SILENT:
 endif # DO_MKDBG
 
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif # DO_ALLDEP
-
 # markdown
 MD_SRC:=$(shell find exercises -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
@@ -131,3 +126,10 @@ $(ALL_STAMP): out/%.stamp: % .shellcheckrc
 	$(info doing [$@])
 	$(Q)shellcheck --severity=error --shell=bash --external-sources --source-path="$$HOME" $<
 	$(Q)pymakehelper touch_mkdir $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP

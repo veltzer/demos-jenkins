@@ -11,7 +11,7 @@ The idea behind this exercise is to run pipelines in parallel.
     (sleep?). Find out on your own how to do it.
     Show that it works. (by activating the build manually).
 
-* Install (or check that it's already installed) the ocean-ui plugin to visualize the
+* Install (or check that it's already installed) the `ocean-ui` plugin to visualize the
     parallel execution (Not a must, nice to have)
 
 Notes:

@@ -2,7 +2,7 @@
 *demmos-jenkins*
 ================
 
-.. image:: https://img.shields.io/pypi/v/demos-jenkins
+.. image:: https://img.shields.io/pypi/v/demos-devops-jenkins
 
 .. image:: https://img.shields.io/github/license/veltzer/demmos-jenkins
 

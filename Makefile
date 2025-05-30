@@ -118,7 +118,7 @@ $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
 	$(Q)pymakehelper touch_mkdir $@
-$(PY_LINT): out/%.lint: %.py
+$(PY_LINT): out/%.lint: %.py .pylintrc
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
 	$(Q)pymakehelper touch_mkdir $@
